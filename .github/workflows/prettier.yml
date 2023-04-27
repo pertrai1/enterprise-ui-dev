@@ -14,5 +14,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Setup nodejs
         uses: actions/setup-node@v3
-      - run: npm install prettier -D
-      - run: npm run format:fix
+        with:
+          node-version: 18
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run format:check
