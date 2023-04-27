@@ -15,4 +15,4 @@ jobs:
       - name: Setup nodejs
         uses: actions/setup-node@v3
       - run: npm install prettier -D
-      - run: npm run format:check
+      - run: npm run format:fix
